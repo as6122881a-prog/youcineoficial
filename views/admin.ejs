@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>YouCine - Painel Admin</title>
+</head>
+<body>
+  <h1>Painel Admin - YouCine</h1>
+  <table border="1" cellpadding="6">
+    <tr>
+      <th>ID</th><th>Nome</th><th>Email</th><th>Assinatura</th><th>Ação</th>
+    </tr>
+    <% users.forEach(function(user) { %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.subscribed ? 'Ativa' : 'Cancelada' %></td>
+        <td>
+          <% if (user.subscribed) { %>
+            <form method="post" action="/admin/cancel/<%= user.id %>" style="display:inline;">
+              <button type="submit">Cancelar assinatura</button>
+            </form>
+          <% } else { %>
+            -
+          <% } %>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+  <p><a href="/admin/logout">Sair</a></p>
+</body>
+</html>
