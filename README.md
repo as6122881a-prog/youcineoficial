@@ -1,35 +1,52 @@
-# YouCineOficial - Example Project
-
-Este repositório contém um exemplo simples de Web App + Painel Admin para YouCineOficial, e o arquivo `app.mobileconfig` para instalação como Web Clip no iOS.
-
-### Como usar (deploy no Vercel via GitHub)
-
-1. Crie um repositório público no GitHub (ex.: `youcineoficial`) e envie todos os arquivos deste projeto na raiz.
-2. Entre em https://vercel.com e faça login com GitHub.
-3. Clique em "New Project" → "Import Git Repository" → selecione seu repositório.
-   - Framework Preset: Other
-   - Build Command: (vazio)
-   - Output Directory: (vazio)
-4. Clique em Deploy.
-5. Após o deploy, o arquivo estará disponível em:
-   `https://<seu-projeto>.vercel.app/app.mobileconfig`
-6. Abra esse link no Safari (iPhone) para instalar o perfil e adicionar o Web Clip.
-
-### Acesso do Admin
-- URL do admin: `https://<seu-projeto>.vercel.app/admin`
-- Usuário: `admin`
-- Senha: `admin123`
-
-### Teste local (opcional)
-1. Instale Node.js.
-2. Rode:
-```
-npm install
-node server.js
-```
-3. Acesse:
-- Web app: http://localhost:3000
-- Admin: http://localhost:3000/admin (use admin/admin123)
-
-### Observações
-- Este projeto é um exemplo simples e **não** deve ser usado em produção sem melhorar segurança (hash de senhas, autenticação adequada, HTTPS, validações).
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>FullScreen</key>
+			<true/>
+			<key>IgnoreManifestScope</key>
+			<true/>
+			<key>IsRemovable</key>
+			<true/>
+			<key>Label</key>
+			<string>Painel Admin YouCine</string>
+			<key>PayloadDescription</key>
+			<string>Acesso Direto ao Painel Administrativo.</string>
+			<key>PayloadDisplayName</key>
+			<string>Web Clip (Admin)</string>
+			<key>PayloadIdentifier</key>
+			<string>COM.SEUAPP.ADMIN.PAINEL</string>
+			<key>PayloadOrganization</key>
+			<string>YouCine Admin</string>
+			<key>PayloadType</key>
+			<string>com.apple.webClip.managed</string>
+			<key>PayloadUUID</key>
+			<string>GERAR-UUID-UNICO-AQUI-123456</string> <key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>SavedIdentifier</key>
+			<string>ADMINACCESSCLIP</string>
+			<key>URL</key>
+			<string>https://youcineoficial.com/admin</string> </dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Perfil de Acesso Exclusivo ao Painel Administrativo.</string>
+	<key>PayloadDisplayName</key>
+	<string>Painel Admin YouCine</string>
+	<key>PayloadIdentifier</key>
+	<string>COM.SEUAPP.ADMIN.PAINEL</string>
+	<key>PayloadOrganization</key>
+	<string>YouCine Admin</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>GERAR-UUID-UNICO-AQUI-123456</string> <key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>ProfileWasEncrypted</key>
+	<false/>
+	<key>TargetDeviceType</key>
+	<integer>0</integer>
+</dict>
+</plist>
